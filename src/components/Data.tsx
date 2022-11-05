@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import css from '../styles/Data.module.css';
+
 export default () => {
   const [domain, setDomain] = useState('');
   const [list, setList] = useState<{ name: string; favicon: string }[]>([]);
@@ -19,6 +20,8 @@ export default () => {
     setList([...list, d]);
     localStorage.setItem('list', JSON.stringify([...list, d]));
     setDomain('');
+    //@ts-ignore
+    await window.electron.addDomain(domain);
   }
   return (
     <div className={css.container}>
