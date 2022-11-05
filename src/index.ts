@@ -61,7 +61,7 @@ electronIpcMain.handle('addDomain', async (_, domain: string) => {
   };
 
   sudo.exec(
-    `${process.resourcesPath}\\extraResources\\hostile.exe set ${domain}`,
+    `${process.resourcesPath}\\extraResources\\hostile.exe set 127.0.0.1 ${domain}`,
     options,
     function (error: any, stdout: any, stderr: any) {
       if (error) throw error;
