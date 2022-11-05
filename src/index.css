@@ -1,5 +1,7 @@
 @import '../node_modules/normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body {
   color: white;
   background-color: #222;
+  font-family: 'Roboto', sans-serif;
 }

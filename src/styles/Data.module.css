@@ -1,0 +1,28 @@
+.container {
+  margin-left: 9px;
+  height: calc(100vh - 100px);
+  width: calc(100vw - 24px);
+  border: 3px solid red;
+  border-radius: 31px;
+}
+.form {
+  margin-top: 9px;
+  display: flex;
+  justify-content: center;
+}
+.form input {
+  background: #222;
+  border: 3px solid red;
+  width: 400px;
+  /* border-radius: 31px; */
+  height: 30px;
+}
+.form button {
+  color: white;
+  border: 3px solid red;
+  background: red;
+}
+
+.form button:hover {
+  cursor: pointer;
+}
