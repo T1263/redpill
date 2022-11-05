@@ -4,6 +4,9 @@
   width: calc(100vw - 24px);
   border: 3px solid red;
   border-radius: 31px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .form {
   margin-top: 9px;
@@ -14,9 +17,11 @@
   background: #222;
   border: 3px solid red;
   width: 400px;
-  /* border-radius: 31px; */
+  outline: none;
   height: 30px;
+  color: white;
 }
+
 .form button {
   color: white;
   border: 3px solid red;
@@ -25,4 +30,16 @@
 
 .form button:hover {
   cursor: pointer;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+}
+.list ul li {
+  margin-left: -40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100vw - 124px);
 }

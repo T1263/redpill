@@ -2845,12 +2845,10 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-favicon-url@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/favicon-url/-/favicon-url-0.0.3.tgz#bb73d202c06ec60bdf3db867a1800cc44f8d275c"
-  integrity sha512-v7c4fjpmVp2Vpk/wydI0xfKdUVe2+409LN6KzBrsxDVLmC+z8lZmS4cO4E7+iuchk+azeJFFPChcqBfu/ATPZw==
-  dependencies:
-    follow-redirects "^1.2.4"
+favicon-fetch@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/favicon-fetch/-/favicon-fetch-1.0.0.tgz#127e810d43605fed904b94ee3fba554684378ccf"
+  integrity sha512-qEbMwsKBebUGo/JpTyeE5aBus5nTsIcYV7qRd5hxGWA3wOrp67aKXBrH3O23tYkNjnOThTyw9TaUrtWwOe3Y1w==
 
 faye-websocket@^0.11.3:
   version "0.11.4"
@@ -2958,7 +2956,7 @@ flora-colossus@^1.0.0:
     debug "^4.1.1"
     fs-extra "^7.0.0"
 
-follow-redirects@^1.0.0, follow-redirects@^1.2.4:
+follow-redirects@^1.0.0:
   version "1.15.2"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
