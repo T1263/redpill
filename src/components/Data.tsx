@@ -10,7 +10,10 @@ export default () => {
   }, []);
   async function handleBlock() {
     const exist = list.find((item) => item.name === domain);
-    if (exist) return;
+    if (exist) {
+      alert(`${domain} is already blocked`);
+      return;
+    }
 
     const d = {
       name: domain,
@@ -23,6 +26,10 @@ export default () => {
     //@ts-ignore
     await window.electron.addDomain(domain);
   }
+  const validDomain = () =>
+    /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/.test(
+      domain
+    );
   return (
     <div className={css.container}>
       <div className={css.form}>
@@ -31,7 +38,12 @@ export default () => {
           onChange={(e) => setDomain(e.target.value)}
           value={domain}
         />
-        <button onClick={handleBlock}>Block</button>
+        <button
+          onClick={handleBlock}
+          disabled={domain === '' || !validDomain()}
+        >
+          Block
+        </button>
       </div>
       <div className={css.list}>
         <ul>
