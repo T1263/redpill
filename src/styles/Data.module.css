@@ -56,6 +56,13 @@
   padding-right: 9px;
   color: gray;
 }
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: grey;
+}
 ::-webkit-scrollbar {
   width: 18px;
 }

@@ -11,7 +11,7 @@ export default () => {
   async function handleBlock() {
     const exist = list.find((item) => item.name === domain);
     if (exist) {
-      const notification = new Notification('REDPILL', {
+      new Notification('REDPILL', {
         body: `${domain} is already blocked`,
       });
       return;
@@ -50,16 +50,20 @@ export default () => {
           Block
         </button>
       </div>
-      <div className={css.list}>
-        <ul>
-          {list.map((d) => (
-            <li key={d.name}>
-              <p>{d.name}</p>
-              <img src={d.favicon} height={20} width={20} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      {list.length > 0 ? (
+        <div className={css.list}>
+          <ul>
+            {list.map((d) => (
+              <li key={d.name}>
+                <p>{d.name}</p>
+                <img src={d.favicon} height={20} width={20} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <div className={css.empty}>Empty</div>
+      )}
     </div>
   );
 };
