@@ -43,7 +43,7 @@
   display: flex;
   justify-content: space-between;
   height: 400px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .list ul li {
   border-bottom: 1px dotted grey;
