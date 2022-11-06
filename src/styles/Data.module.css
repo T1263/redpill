@@ -21,7 +21,6 @@
   outline: none;
   color: white;
 }
-
 .form button {
   color: white;
   border: 3px solid grey;
@@ -55,6 +54,7 @@
   width: calc(100vw - 81px);
   padding-left: 9px;
   padding-right: 9px;
+  color: gray;
 }
 
 ::-webkit-scrollbar {
@@ -66,5 +66,5 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: grey;
+  background: red;
 }
