@@ -56,15 +56,16 @@
   padding-right: 9px;
   color: gray;
 }
-
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 18px;
 }
-
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
+  border-top-left-radius: 27px;
+  border-top-right-radius: 27px;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: red;
+  background: grey;
+  border-top-left-radius: 27px;
+  border-top-right-radius: 27px;
 }
