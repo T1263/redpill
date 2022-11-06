@@ -11,7 +11,9 @@ export default () => {
   async function handleBlock() {
     const exist = list.find((item) => item.name === domain);
     if (exist) {
-      alert(`${domain} is already blocked`);
+      const notification = new Notification('REDPILL', {
+        body: `${domain} is already blocked`,
+      });
       return;
     }
 
@@ -25,6 +27,9 @@ export default () => {
     setDomain('');
     //@ts-ignore
     await window.electron.addDomain(domain);
+    new Notification('REDPILL', {
+      body: `${domain} is NOW BLOCKED`,
+    });
   }
   const validDomain = () =>
     /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/.test(
