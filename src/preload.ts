@@ -4,6 +4,6 @@ import { contextBridge, ipcRenderer } from 'electron';
 
 contextBridge.exposeInMainWorld('electron', {
   blockDomain: async (domain: string) => {
-    ipcRenderer.invoke('addDomain', domain);
+    ipcRenderer.invoke('blockDomain', domain);
   },
 });
