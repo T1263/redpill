@@ -20,8 +20,8 @@ export default () => {
       favicon: `https://icon.horse/icon/${domain}`,
     };
 
-    setList([...list, d]);
-    localStorage.setItem('list', JSON.stringify([...list, d]));
+    setList([d, ...list]);
+    localStorage.setItem('list', JSON.stringify([d, ...list]));
     setDomain('');
     //@ts-ignore
     await window.electron.addDomain(domain);
