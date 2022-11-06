@@ -1,4 +1,15 @@
 .red {
-  color: red;
-  font-size: 30px;
+  width: 60px;
+  height: 21px;
+  border-radius: 25%;
+  background: red;
+  animation: red 6s linear infinite;
+}
+@keyframes red {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }

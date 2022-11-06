@@ -1,4 +1,4 @@
 import css from '../styles/Logo.module.css';
 export default () => {
-  return <h1 className={css.red}>RedPill</h1>;
+  return <h1 className={css.red}></h1>;
 };
