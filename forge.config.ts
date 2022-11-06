@@ -11,6 +11,7 @@ import { rendererConfig } from './webpack.renderer.config';
 const config: ForgeConfig = {
   packagerConfig: {
     extraResource: ['./src/extraResources'],
+    icon: './src/icons/red',
   },
   rebuildConfig: {},
   makers: [
@@ -18,6 +19,18 @@ const config: ForgeConfig = {
     new MakerZIP({}, ['darwin']),
     new MakerRpm({}),
     new MakerDeb({}),
+  ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'Wilkin Novo',
+          name: 'redpill',
+        },
+        prerelease: true,
+      },
+    },
   ],
   plugins: [
     new WebpackPlugin({

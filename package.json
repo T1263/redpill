@@ -2,7 +2,7 @@
   "name": "redpill",
   "productName": "redpill",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "The redpill app",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
@@ -42,7 +42,6 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "favicon-fetch": "^1.0.0",
     "normalize.css": "^8.0.1",
     "npm": "^8.19.3",
     "react": "^18.2.0",
