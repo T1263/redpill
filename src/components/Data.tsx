@@ -26,7 +26,7 @@ export default () => {
     localStorage.setItem('list', JSON.stringify([d, ...list]));
     setDomain('');
     //@ts-ignore
-    await window.electron.addDomain(domain);
+    await window.electron.blockDomain(domain);
     new Notification('REDPILL', {
       body: `${domain} is NOW BLOCKED`,
     });
