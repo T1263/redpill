@@ -17,7 +17,7 @@
   width: 16px;
   height: 16px;
   border-radius: 10px;
-  background: #ff3d00;
+  background: red;
   animation: move 3s linear infinite alternate;
 }
 
