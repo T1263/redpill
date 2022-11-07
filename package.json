@@ -8,7 +8,7 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "github": "set GITHUB_TOKEN=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 && electron-forge publish ",
+    "github": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx ."
   },
   "keywords": [],
