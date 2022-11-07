@@ -42,7 +42,7 @@ app.on('activate', () => {
 
 ipcMain.handle('blockDomain', async (_, domain: string) => {
   const options = {
-    name: 'Redpill',
+    name: 'REDPILL',
   };
 
   return new Promise(function (res, rej) {
