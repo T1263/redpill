@@ -1,7 +1,7 @@
 {
   "name": "redpill",
   "productName": "redpill",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The redpill app",
   "main": ".webpack/main",
   "scripts": {
