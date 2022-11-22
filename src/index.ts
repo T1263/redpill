@@ -46,13 +46,17 @@ ipcMain.handle('blockDomain', async (_, domain: string) => {
   };
 
   return new Promise(function (res, rej) {
-    sudo.exec(
-      `${process.resourcesPath}\\extraResources\\hostile.exe set 127.0.0.1 ${domain}`,
-      options,
-      function (error: any, stdout: any, oerrr: any) {
-        if (error || oerrr) rej(error);
-        res(stdout);
-      }
-    );
+    let path = '';
+    if (process.platform === 'win32') {
+      path = `${
+        process.resourcesPath
+      }\\extraResources\\${'hostile.exe'} set 127.0.0.1 ${domain}`;
+    } else {
+      path = `${process.resourcesPath}/extraResources/hostile set 127.0.0.1 ${domain}`;
+    }
+    sudo.exec(path, options, function (error: any, stdout: any, oerrr: any) {
+      if (error || oerrr) rej(error);
+      res(stdout);
+    });
   });
 });

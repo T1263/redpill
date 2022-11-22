@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import css from '../styles/Data.module.css';
-import Loading from './loading';
+import Loading from './Loading';
 
 export default () => {
   const [domain, setDomain] = useState('');
